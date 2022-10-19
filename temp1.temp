@@ -1,0 +1,247 @@
+// import 'package:flutter/cupertino.dart';
+// import 'package:flutter/foundation.dart';
+// import 'package:flutter/material.dart';
+// import 'package:flutter_application_1/HomeScreen.dart';
+// import 'package:flutter_application_1/home.dart';
+
+// void main(List<String> args) {
+//   runApp(MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         theme: ThemeData(
+//           primaryColor: Colors.indigo,
+//         ),
+//         title: "Bootom navigation",
+//         home: const HomeScreen());
+//   }
+// }
+
+// class HomeScreen extends StatelessWidget {
+//   const HomeScreen({Key? key}) : super(key: key);
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(
+//           'Launch Industry',
+//           style: TextStyle(
+//             color: Colors.black,
+//             fontStyle: FontStyle.italic,
+//             fontSize: 15,
+//             fontWeight: FontWeight.bold,
+//           ),
+//         ),
+//         backgroundColor: Colors.white70,
+//         elevation: 0,
+//         actions: [
+//           IconButton(
+//             icon: Icon(Icons.add_ic_call_rounded, color: Colors.black),
+//             onPressed: () {},
+//           ),
+//           IconButton(
+//             icon: Icon(Icons.notifications, color: Colors.black),
+//             onPressed: () {},
+//           ),
+//           IconButton(
+//             icon: Icon(Icons.menu, color: Colors.black),
+//             onPressed: () {},
+//           )
+//         ],
+//         leading: IconButton(
+//           icon: Icon(
+//             Icons.account_circle,
+//             color: Colors.black,
+//             size: 25.0,
+//           ),
+//           onPressed: () {},
+//         ),
+//         leadingWidth: 25,
+// bottom: TabBar(
+//   labelColor: Colors.black,
+//   unselectedLabelColor: Colors.grey,
+//   tabs: [
+//     Tab(
+//         icon: Icon(
+//           Icons.add_shopping_cart_sharp,
+//         ),
+//         text: 'Load Market'),
+//     Tab(
+//         icon: Icon(
+//           Icons.airport_shuttle_outlined,
+//         ),
+//         text: 'Lorry Market'),
+//   ],
+// ),
+//       ),
+//       body: Text('home'),
+//       bottomNavigationBar: BottomNavigationBar(items: <BottomNavigationBarItem>[
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.add_shopping_cart_sharp),
+//         ),
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.add_shopping_cart_sharp),
+//         ),
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.add_shopping_cart_sharp),
+//         ),
+//         BottomNavigationBarItem(
+//           icon: Icon(Icons.add_shopping_cart_sharp),
+//         ),
+//       ]),
+//     );
+//   }
+// }
+
+// import 'package:flutter/material.dart';
+
+// void main() => runApp(const MyApp());
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   static const String _title = 'Flutter Code Sample';
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       title: _title,
+//       home: MyStatefulWidget(),
+//     );
+//   }
+// }
+
+// class MyStatefulWidget extends StatefulWidget {
+//   const MyStatefulWidget({Key? key}) : super(key: key);
+
+//   @override
+//   State<MyStatefulWidget> createState() => _MyStatefulWidgetState();
+// }
+
+// class _MyStatefulWidgetState extends State<MyStatefulWidget> {
+//   int _selectedIndex = 0;
+//   static const TextStyle optionStyle =
+//       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+//   static const List<Widget> _widgetOptions = <Widget>[
+//     Text(
+//       'Index 0: Home',
+//       style: optionStyle,
+//     ),
+//     Text(
+//       'Index 1: Business',
+//       style: optionStyle,
+//     ),
+//     Text(
+//       'Index 2: School',
+//       style: optionStyle,
+//     ),
+//     Text(
+//       'Index 3: Office',
+//       style: optionStyle,
+//     ),
+//   ];
+
+//   void _onItemTapped(int index) {
+//     setState(() {
+//       _selectedIndex = index;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: const Text(
+//           'Launch Industry',
+//           style: TextStyle(
+//             color: Colors.black,
+//             fontStyle: FontStyle.italic,
+//             fontSize: 15,
+//             fontWeight: FontWeight.bold,
+//           ),
+//         ),
+//         backgroundColor: Colors.white70,
+//         elevation: 0,
+//       ),
+//       body: Center(
+//         child: _widgetOptions.elementAt(_selectedIndex),
+//       ),
+//       bottomNavigationBar: BottomNavigationBar(
+//         items: const <BottomNavigationBarItem>[
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.home),
+//             label: 'Home',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.business),
+//             label: 'Business',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.school),
+//             label: 'School',
+//           ),
+//           BottomNavigationBarItem(
+//             icon: Icon(Icons.school),
+//             label: 'School',
+//           ),
+//         ],
+//         currentIndex: _selectedIndex,
+//         selectedItemColor: Colors.amber[800],
+//         onTap: _onItemTapped,
+//       ),
+//     );
+//   }
+// }
+
+
+
+
+
+
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+
+void main(List<String> args) {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData(
+        primaryColor: Colors.indigo,
+      ),
+      home: HomeScreen(),
+    );
+  }
+}
+
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
+  Widget build(BuildContext context) {
+    appBar:
+    AppBar(
+      automaticallyImplyLeading: false, // Don't show the leading button
+      title: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: <Widget>[
+          IconButton(
+            onPressed: () => Navigator.pop(context),
+            icon: Icon(Icons.arrow_back, color: Colors.white),
+          ),
+          // Your widgets here
+        ],
+      ),
+    );
+    return Scaffold();
+  }
+}
